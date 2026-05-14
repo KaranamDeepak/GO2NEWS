@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "deepak ",
+      "email": "deepak@gmail.com",
+      "password": "$2b$10$3.PX1ZLm0uGiDG5CUy0kr.hhOqE6HwB4ggOLj66HdqYKOGr/xzfEW",
+      "bookmarks": []
+    }
+  ],
+  "nextId": 2
+}

@@ -1,0 +1,118 @@
+/* =====================================
+   LOGIN PAGE (consistent with news UI)
+===================================== */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #020617, #0f172a, #1e293b);
+  padding: 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  padding: 40px 32px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+}
+
+.login-title {
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #38bdf8, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.login-subtitle {
+  text-align: center;
+  color: #cbd5e1;
+  margin-bottom: 32px;
+  font-size: 15px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.login-input:focus {
+  border-color: #38bdf8;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.login-input::placeholder {
+  color: #94a3b8;
+}
+
+.login-button {
+  background: linear-gradient(to right, #2563eb, #7c3aed);
+  border: none;
+  padding: 14px;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 28px;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.login-link {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+  color: #60a5fa;
+}

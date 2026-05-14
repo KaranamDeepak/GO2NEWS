@@ -1,4 +1,13 @@
 // App.js
+import {
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import SavedNews from "./pages/SavedNews";
 
 import React,{
   useEffect,
@@ -446,12 +455,17 @@ function App(){
 
       <div className="navbar">
 
-        <div className="logo">
-
-          Go2News
-
-        </div>
-
+        <div className="logo">Go2News</div>
+<div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
+  <Link to="/saved" style={{ color: "white", textDecoration: "none" }}>📚 Saved</Link>
+  {localStorage.getItem("token") ? (
+    <button onClick={() => { localStorage.clear(); window.location.href = "/login"; }} style={{ background: "none", border: "1px solid white", padding: "5px 12px", borderRadius: "20px", color: "white", cursor: "pointer" }}>
+      Logout
+    </button>
+  ) : (
+    <Link to="/login" style={{ color: "white", textDecoration: "none" }}>🔐 Login</Link>
+  )}
+</div>
         <div className="controls">
 
           {/* SEARCH */}
@@ -771,5 +785,37 @@ function App(){
   );
 
 }
+function Main(){
 
-export default App;
+  return(
+
+    <Routes>
+
+      <Route
+        path="/"
+        element={<App />}
+      />
+
+      <Route
+        path="/login"
+        element={<Login />}
+      />
+
+      <Route
+        path="/register"
+        element={<Register />}
+      />
+
+      <Route
+        path="/saved"
+        element={<SavedNews />}
+      />
+
+    </Routes>
+
+  );
+
+}
+
+export default Main;
+
