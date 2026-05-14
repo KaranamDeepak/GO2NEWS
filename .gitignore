@@ -1,21 +1,20 @@
-# node modules
-backend/node_modules/
-frontend/node_modules/
+# dependencies
+node_modules/
 
-# environment files
-backend/.env
-
-# python cache
+# python
+.venv/
 __pycache__/
+*.pyc
 
-# build folders
-frontend/build/
+# env
+.env
 
-# logs
-npm-debug.log*
+# build
+dist/
+build/
 
 # vscode
 .vscode/
 
-# system files
-.DS_Store
+# logs
+npm-debug.log*
