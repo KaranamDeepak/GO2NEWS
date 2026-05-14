@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 
 const DB_PATH = path.join(__dirname, "database.json");
 
-// Initialize database file if it doesn't exist
+
 function initDB() {
   if (!fs.existsSync(DB_PATH)) {
     const initialData = {
